@@ -1,6 +1,8 @@
 #include<iostream>
 #include "Pessoa.cpp"
+#include "MinhasExececoes.cpp"
 using namespace std;
+
 
 int main () {
     Endereco e("Rua R", 1, "Bairro B");
@@ -14,5 +16,29 @@ int main () {
     cout << "CPF: " << p.getCPF() << endl;
     cout << "Data de Nascimento: " << p.getNascimento() << endl;
     cout << "Endereço: " << p.getEndereco() << endl;
+
+    int dia, mes, ano;
+
+    while (true) {
+        try{
+        cout << "Informe o dia: " << endl;
+        cin >> dia;
+        cout << "Informe o mês: " << endl;
+        cin >> mes;
+        cout << "Informe o ano: " << endl;
+        cin >> ano;
+
+        if (dia<1 || dia>31){
+            throw MinhasExececoes ("Dia invalido!");
+        }
+
+        Data d(dia, mes, ano);
+        cout << d.getData();
+        break;
+
+        } catch(MinhasExececoes e){
+        cout<< e.mensagem << endl;
+        }
+    }
 
 }
