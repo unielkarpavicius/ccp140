@@ -3,7 +3,8 @@
 using namespace std;
 
 int main () {
-    Pessoa p ("Nome", "Sobrenome", 7865270256, 11, 9, 2001);
+    Endereco e("Rua R", 1, "Bairro B");
+    Pessoa p ("Nome", "Sobrenome", 7865270256, 11, 9, 2001, e);
     //p.setNome("Nome");
     //p.setSobrenome("Sobrenome");
     //p.setCPF(7865270256);
@@ -12,5 +13,6 @@ int main () {
     cout << "Nome: " << p.getNome() << " " << p.getSobrenome() << endl;
     cout << "CPF: " << p.getCPF() << endl;
     cout << "Data de Nascimento: " << p.getNascimento() << endl;
+    cout << "Endereço: " << p.getEndereco() << endl;
 
 }
