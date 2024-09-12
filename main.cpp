@@ -32,6 +32,14 @@ int main () {
             throw MinhasExececoes ("Dia invalido!");
         }
 
+        if (mes<1 || mes>12){
+            throw MinhasExececoes ("Mês invalido!");
+        }
+
+        if (ano<1900 || ano>2024){
+            throw MinhasExececoes ("Ano invalido!");
+        }
+
         Data d(dia, mes, ano);
         cout << d.getData();
         break;
