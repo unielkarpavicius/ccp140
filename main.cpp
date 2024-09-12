@@ -28,9 +28,46 @@ int main () {
         cout << "Informe o ano: " << endl;
         cin >> ano;
 
-        if (dia<1 || dia>31){
-            throw MinhasExececoes ("Dia invalido!");
+        if (((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0)) {
+            if (mes == 2){ 
+                if(dia <1 || dia>29){
+                    throw MinhasExececoes ("Dia invalido!");
+                }
+            }
+             else if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 ){ 
+                if(dia <1 || dia>31){
+                    throw MinhasExececoes ("Dia invalido!");
+                }
+            }
+            else{
+                if(dia<1 || dia> 30){
+                    throw MinhasExececoes ("Dia invalido!");
+                }
+            }
         }
+        else{
+            if (mes == 2){ 
+                if(dia <1 || dia>28){
+                    throw MinhasExececoes ("Dia invalido!");
+                }
+            }
+             else if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 ){ 
+                if(dia <1 || dia>31){
+                    throw MinhasExececoes ("Dia invalido!");
+                }
+            }
+            else{
+                if(dia<1 || dia> 30){
+                    throw MinhasExececoes ("Dia invalido!");
+                }
+            }
+
+        }
+
+
+        //if (dia<1 || dia>31){
+          //  throw MinhasExececoes ("Dia invalido!");
+        //}
 
         if (mes<1 || mes>12){
             throw MinhasExececoes ("Mês invalido!");
