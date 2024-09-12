@@ -7,42 +7,47 @@ class Pessoa{
         string nome;
         string sobrenome;
         long cpf;
-        Data Nascimento;
+        Data nascimento;
 
     public:
 
-        Pessoa(string nome, string sobrenome, long cpf){
-            this -> nome = nome;
-            this -> sobrenome = sobrenome;
-            this -> cpf = cpf;
-        }
+        //Pessoa(string nome, string sobrenome, long cpf){
+            //this -> nome = nome;
+            //this -> sobrenome = sobrenome;
+            //this -> cpf = cpf;
+        //}
 
-        //Pessoa(string nome, string sobrenome, long cpf):nome(nome), sobrenome(sobrenome), cpf(cpf){}
+        Pessoa(string nome, string sobrenome, long cpf, int dia, int mes, int ano):
+        nome(nome), sobrenome(sobrenome), cpf(cpf), nascimento(dia, mes, ano){}
 
         void setNome (string nome, string sobrenome) {
             this -> nome = nome;
             this -> sobrenome = sobrenome;
 
         }
-        void setNome (string nome) {
+        void setNome(string nome) {
             this -> nome = nome;
 
         }
-        void setSobrenome (string sobrenome) {
+        void setSobrenome(string sobrenome) {
             this -> sobrenome = sobrenome;
         }
-        void setCPF (long cpf) {
+        void setCPF(long cpf) {
             this -> cpf = cpf;
         }
 
-        string getNome (){
+        string getNome(){
             return nome;
         }
-        string getSobrenome (){
+        string getSobrenome(){
             return sobrenome;
         }
-        long getCPF (){
+        long getCPF(){
             return cpf;
+        }
+
+        string getNascimento() {
+            return this->nascimento.getData();
         }
         
 };

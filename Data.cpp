@@ -7,10 +7,11 @@ class Data{
 
     private: 
     int dia,mes,ano;
+
     public:
         Data(int dia,int mes,int ano): dia {dia} ,mes{mes},ano{ano}{};
         
-        string getData{}{ 
+        string getData(){ 
             return to_string(dia)+"/"+to_string(mes)+"/"+to_string(ano);
         }
 };
