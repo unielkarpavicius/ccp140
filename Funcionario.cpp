@@ -14,5 +14,4 @@ class Funcionario: public Pessoa{
         Pessoa(nome, sobrenome, cpf, dia, mes, ano, endereco),
         salario{salario}, cadastro{cadastro}{}
 
-
 };

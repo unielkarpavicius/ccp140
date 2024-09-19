@@ -13,18 +13,25 @@ int main () {
     //p.setCPF(7865270256);
     Funcionario f ("Funcionário", "Sobrenome", 7865270256, 11, 9, 2001, e, 1000, 1234);
 
-    cout << "Dados da Pessoa" << endl;
-    cout << "Nome: " << p.getNome() << " " << p.getSobrenome() << endl;
-    cout << "CPF: " << p.getCPF() << endl;
-    cout << "Data de Nascimento: " << p.getNascimento() << endl;
-    cout << "Endereço: " << p.getEndereco() << endl;
+    Pessoa*pessoas[2];
+    pessoas [0] = &p;
+    pessoas [1] = &f;
 
-    cout << "Dados da Funcionário" << endl;
-    cout << "Nome: " << f.getNome() << " " << f.getSobrenome() << endl;
-    cout << "CPF: " << f.getCPF() << endl;
-    cout << "Data de Nascimento: " << f.getNascimento() << endl;
-    cout << "Endereço: " << f.getEndereco() << endl;
-    
+
+    for(int i=0; i<2; i++){
+        cout << "Dados da Pessoa" << endl;
+        cout << "Nome: " << pessoas[i]->getNome() << " " << pessoas[i]->getSobrenome() << endl;
+        cout << "CPF: " << pessoas[i]->getCPF() << endl;
+        cout << "Data de Nascimento: " << pessoas[i]->getNascimento() << endl;
+        cout << "Endereço: " << pessoas[i]->getEndereco() << endl;
+    }
+
+    //cout << "Dados da Funcionário" << endl;
+    //cout << "Nome: " << f.getNome() << " " << f.getSobrenome() << endl;
+    //cout << "CPF: " << f.getCPF() << endl;
+    //cout << "Data de Nascimento: " << f.getNascimento() << endl;
+    //cout << "Endereço: " << f.getEndereco() << endl;
+
 
     //int dia, mes, ano;
 
