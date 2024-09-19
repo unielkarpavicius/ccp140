@@ -1,5 +1,6 @@
 #include<iostream>
 #include "Pessoa.cpp"
+#include "Funcionario.cpp"
 #include "MinhasExececoes.cpp"
 using namespace std;
 
@@ -17,73 +18,73 @@ int main () {
     cout << "Data de Nascimento: " << p.getNascimento() << endl;
     cout << "Endereço: " << p.getEndereco() << endl;
 
-    int dia, mes, ano;
+    //int dia, mes, ano;
 
-    while (true) {
-        try{
-        cout << "Informe o dia: " << endl;
-        cin >> dia;
-        cout << "Informe o mês: " << endl;
-        cin >> mes;
-        cout << "Informe o ano: " << endl;
-        cin >> ano;
+    //while (true) {
+        //try{
+        //cout << "Informe o dia: " << endl;
+        //cin >> dia;
+        //cout << "Informe o mês: " << endl;
+        //cin >> mes;
+        //cout << "Informe o ano: " << endl;
+        //cin >> ano;
 
-        if (((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0)) {
-            if (mes == 2){ 
-                if(dia <1 || dia>29){
-                    throw MinhasExececoes ("Dia invalido!");
-                }
-            }
-             else if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 ){ 
-                if(dia <1 || dia>31){
-                    throw MinhasExececoes ("Dia invalido!");
-                }
-            }
-            else{
-                if(dia<1 || dia> 30){
-                    throw MinhasExececoes ("Dia invalido!");
-                }
-            }
-        }
-        else{
-            if (mes == 2){ 
-                if(dia <1 || dia>28){
-                    throw MinhasExececoes ("Dia invalido!");
-                }
-            }
-             else if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 ){ 
-                if(dia <1 || dia>31){
-                    throw MinhasExececoes ("Dia invalido!");
-                }
-            }
-            else{
-                if(dia<1 || dia> 30){
-                    throw MinhasExececoes ("Dia invalido!");
-                }
-            }
+        //if (((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0)) {
+            //if (mes == 2){ 
+                //if(dia <1 || dia>29){
+                  //  throw MinhasExececoes ("Dia invalido!");
+                //}
+            //}
+             //else if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 ){ 
+                //if(dia <1 || dia>31){
+                //    throw MinhasExececoes ("Dia invalido!");
+              //  }
+            //}
+            //else{
+                //if(dia<1 || dia> 30){
+              //      throw MinhasExececoes ("Dia invalido!");
+            //    }
+          //  }
+        //}
+        //else{
+            //if (mes == 2){ 
+                //if(dia <1 || dia>28){
+                //    throw MinhasExececoes ("Dia invalido!");
+              //  }
+            //}
+             //else if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 ){ 
+                //if(dia <1 || dia>31){
+                //    throw MinhasExececoes ("Dia invalido!");
+              //  }
+            //}
+            //else{
+                //if(dia<1 || dia> 30){
+              //      throw MinhasExececoes ("Dia invalido!");
+            //    }
+          //  }
 
-        }
+        //}
 
 
         //if (dia<1 || dia>31){
           //  throw MinhasExececoes ("Dia invalido!");
         //}
 
-        if (mes<1 || mes>12){
-            throw MinhasExececoes ("Mês invalido!");
-        }
+        //if (mes<1 || mes>12){
+          //  throw MinhasExececoes ("Mês invalido!");
+        //}
 
-        if (ano<1900 || ano>2024){
-            throw MinhasExececoes ("Ano invalido!");
-        }
+        //if (ano<1900 || ano>2024){
+          //  throw MinhasExececoes ("Ano invalido!");
+        //}
 
-        Data d(dia, mes, ano);
-        cout << d.getData();
-        break;
+        //Data d(dia, mes, ano);
+        //cout << d.getData();
+        //break;
 
-        } catch(MinhasExececoes e){
-        cout<< e.mensagem << endl;
-        }
-    }
+        //} catch(MinhasExececoes e){
+        //cout<< e.mensagem << endl;
+      //  }
+    //}
 
 }
