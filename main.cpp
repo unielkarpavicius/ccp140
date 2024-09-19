@@ -19,11 +19,7 @@ int main () {
 
 
     for(int i=0; i<2; i++){
-        cout << "Dados da Pessoa" << endl;
-        cout << "Nome: " << pessoas[i]->getNome() << " " << pessoas[i]->getSobrenome() << endl;
-        cout << "CPF: " << pessoas[i]->getCPF() << endl;
-        cout << "Data de Nascimento: " << pessoas[i]->getNascimento() << endl;
-        cout << "Endereço: " << pessoas[i]->getEndereco() << endl;
+        pessoas[i]->print();
     }
 
     //cout << "Dados da Funcionário" << endl;

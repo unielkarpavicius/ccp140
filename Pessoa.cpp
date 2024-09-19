@@ -55,5 +55,13 @@ class Pessoa{
         string getEndereco() {
             return this->endereco.getEndereco();
         }
+        virtual void print(){
+            cout << "Dados da Pessoa" << endl;
+            cout << "Nome: " << this->getNome() << " " << this->getSobrenome() << endl;
+            cout << "CPF: " << this->getCPF() << endl;
+            cout << "Data de Nascimento: " << this->getNascimento() << endl;
+            cout << "Endereço: " << this->getEndereco() << endl;
+            cout << "\n" << endl;
+        }
 
 };
